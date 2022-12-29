@@ -9,7 +9,6 @@ var SpotifyWebApi = require('spotify-web-api-node');
 const Token = require('./models/Token');
 var cookieParser = require('cookie-parser');
 
-const SongRoute = require('./router/songsRouter')
 const SpotifyRoute = require('./router/spotifyRouter');
 const SearchRoute = require('./router/searchRouter');
 const IndexRoute = require('./router/IndexRoute');
@@ -48,7 +47,6 @@ app.use(express.static('public'));
 
 app.use(bodyParser.json({limit:'50000mb'}));
 
-app.use(SongRoute);
 app.use(SpotifyRoute);
 app.use(SearchRoute);
 app.use(IndexRoute);
